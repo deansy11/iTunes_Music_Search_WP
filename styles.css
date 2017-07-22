@@ -2,6 +2,46 @@ body {
   background-color: #60d9f1;
 }
 
+h1 {
+  text-align: center;
+}
+
+.music-player {
+  width: 90%;
+  margin: 20px 10px 20px 50px;
+  border: 1px solid #838585;
+}
+
+.music-input {
+  margin: 10px 15px 15px 170px;
+  width: 500px;
+  border: 1px solid #BCCBD0;
+}
+
+button {
+  width: 150px;
+}
+
 ul {
   list-style: none;
+}
+
+li {
+  width: 100px;
+  margin: 0 20px 0 20px;
+  text-align: center;
+}
+
+img {
+  width: 150px;
+}
+
+.song-title {
+  
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+
 }

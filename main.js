@@ -9,7 +9,7 @@
 // 5. Create a way to listen for a click that will play the song in the audio play
 
 let baseUrl = "https://itunes.apple.com/search?term="
-const container = document.querySelector(".container");
+const artistResults = document.querySelector(".results");
 let inputBar = document.querySelector(".music-input");
 let button = document.querySelector("button");
 
@@ -31,15 +31,15 @@ button.addEventListener("click", function(e) {
           <ul>
            <li>
               // <img src="${items.artworkUrl100}" alt="image_not_shown">
+              <span class="song-title"><a href="${items.trackViewUrl}">${items.trackName}</span>
               <h4><a href="${items.artistViewUrl}">${items.artistName}<h4>
-              <span><a href="${items.trackViewUrl}">${items.trackName}</span>
            </li>
           </ul>
           `
           templateContainer += template;
 
         });
-        container.innerHTML = templateContainer;
+        artistResults.innerHTML = templateContainer;
         inputBar.value = "";
       })
     });
