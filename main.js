@@ -26,18 +26,18 @@ button.addEventListener("click", function(e) {
       response.json().then(function(data) {
         let templateContainer = "";
         data.results.forEach(function(items) {
-          console.log(data);
-          let template = `
-          <ul>
-           <li>
-              // <img src="${items.artworkUrl100}" alt="image_not_shown">
-              <span class="song-title"><a href="${items.trackViewUrl}">${items.trackName}</span>
-              <h4><a href="${items.artistViewUrl}">${items.artistName}<h4>
-           </li>
-          </ul>
-          `
-          templateContainer += template;
-
+          if (items.kind === "song") {
+            let template = `
+            <ul>
+            <li>
+            // <img src="${items.artworkUrl100}" alt="image_not_shown">
+            <span class="song-title"><a href="${items.trackViewUrl}">${items.trackName}</span>
+            <h4><a href="${items.artistViewUrl}">${items.artistName}<h4>
+            </li>
+            </ul>
+            `
+            templateContainer += template;
+          }
         });
         artistResults.innerHTML = templateContainer;
         inputBar.value = "";
