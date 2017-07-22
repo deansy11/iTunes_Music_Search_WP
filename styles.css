@@ -1,14 +1,18 @@
 body {
-  background-color: #60d9f1;
+  background-color: #BCCBD0;
 }
 
 h1 {
   text-align: center;
+  margin-top: 30px;
+  font-family: 'Amatic SC';
+  font-size: 100px;
+
 }
 
 .music-player {
   width: 90%;
-  margin: 20px 10px 20px 50px;
+  margin: 0 10px 20px 50px;
   border: 1px solid #838585;
 }
 
@@ -16,10 +20,19 @@ h1 {
   margin: 10px 15px 15px 170px;
   width: 500px;
   border: 1px solid #BCCBD0;
+  height: 25px;
+  box-shadow: 10px 10px 10px #CDCECE;
 }
 
 button {
   width: 150px;
+  background-color: #FF6868;
+  border-radius: 8px;
+  height: 30px;
+  box-shadow: 8px 8px 8px #CDCECE;
+  font-family: 'Amatic SC';
+  font-size: 20px;
+  font-weight: 600;
 }
 
 ul {
@@ -36,9 +49,15 @@ img {
   width: 150px;
 }
 
-.song-title {
-  
+h4 {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Amatic SC';
 }
+
+/*span {
+  font-family: 'Amatic SC';
+}*/
 
 .results {
   display: flex;

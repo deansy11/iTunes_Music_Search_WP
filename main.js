@@ -25,14 +25,15 @@ button.addEventListener("click", function(e) {
       }
       response.json().then(function(data) {
         let templateContainer = "";
+        console.log(data);
         data.results.forEach(function(items) {
           if (items.kind === "song") {
             let template = `
             <ul>
             <li>
-            // <img src="${items.artworkUrl100}" alt="image_not_shown">
-            <span class="song-title"><a href="${items.trackViewUrl}">${items.trackName}</span>
-            <h4><a href="${items.artistViewUrl}">${items.artistName}<h4>
+            <img src="${items.artworkUrl100}" alt="image_not_shown">
+              <span class="song-title"><a href="${items.trackViewUrl}">${items.trackName}</span>
+              <h4><a href="${items.artistViewUrl}">${items.artistName}<h4>
             </li>
             </ul>
             `
@@ -44,3 +45,8 @@ button.addEventListener("click", function(e) {
       })
     });
   })
+
+  // let songClick = document.querySelector(".song-title");
+  // songClick.addEventListener("click", function(e) {
+  //
+  // });
