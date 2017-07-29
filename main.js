@@ -32,34 +32,34 @@ button.addEventListener("click", function(e) {
             <ul>
             <li>
             <img src="${items.artworkUrl100}" alt="image_not_shown">
-              <span class="song-title"><a href="${items.trackViewUrl}">${items.trackName}</span>
+              <span class="song-title"><a href="${items.trackViewUrl}" class="songUrl">${items.trackName}</span>
               <h4><a href="${items.artistViewUrl}">${items.artistName}<h4>
             </li>
             </ul>
             `
             templateContainer += template;
           }
+          artistResults.innerHTML = templateContainer;
+          inputBar.value = "";
+
+          let songClick = document.querySelector(".song-title");
+          let newTrack = document.querySelector(".music-player");
+          let trackUrl = document.querySelector(".songUrl");
+          let playTrack = newTrack.src;
+
+          // added event listener to try to dynamically adjust the src content of audio file
+          songClick.addEventListener("click", function(e) {
+            e.preventDefault();
+            console.log("Is this working?");
+            let elm = e.target;
+            let source = document.querySelector(".music-player");
+            source.src = trackUrl;
+
+            console.log(trackUrl);
         });
-        artistResults.innerHTML = templateContainer;
-        inputBar.value = "";
 
-        let songClick = document.querySelector(".song-title");
-        let newTrack = document.querySelector(".music-player");
-        let playTrack = newTrack.src;
-
-        songClick.addEventListener("click", function(e) {
-          e.preventDefault();
-          console.log("Is this working?");
         });
       });
     });
 
-    //  playTrack.innerHTML += songClick;
   });
-
-// songClick.addEventListener("click", function(e) {
-//   e.preventDefault();
-//
-//   let elm
-// })
-//
