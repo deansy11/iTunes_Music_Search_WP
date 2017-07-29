@@ -45,21 +45,23 @@ button.addEventListener("click", function(e) {
           let songClick = document.querySelector(".song-title");
           let newTrack = document.querySelector(".music-player");
           let trackUrl = document.querySelector(".songUrl");
-          let playTrack = newTrack.src;
 
           // added event listener to try to dynamically adjust the src content of audio file
           songClick.addEventListener("click", function(e) {
             e.preventDefault();
-            console.log("Is this working?");
             let elm = e.target;
             let source = document.querySelector(".music-player");
             source.src = trackUrl;
+          });
 
-            console.log(trackUrl);
-        });
-
+// trying to create event listener so that I can activate the play 
+          newTrack.addEventListener("click", function(e) {
+            e.preventDefault();
+            console.log("Hello?");
+            newTrack.play();
+          });
         });
       });
     });
 
-  });
+});
