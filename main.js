@@ -42,11 +42,24 @@ button.addEventListener("click", function(e) {
         });
         artistResults.innerHTML = templateContainer;
         inputBar.value = "";
-      })
-    });
-  })
 
-  // let songClick = document.querySelector(".song-title");
-  // songClick.addEventListener("click", function(e) {
-  //
-  // });
+        let songClick = document.querySelector(".song-title");
+        let newTrack = document.querySelector(".music-player");
+        let playTrack = newTrack.src;
+
+        songClick.addEventListener("click", function(e) {
+          e.preventDefault();
+          console.log("Is this working?");
+        });
+      });
+    });
+
+    //  playTrack.innerHTML += songClick;
+  });
+
+// songClick.addEventListener("click", function(e) {
+//   e.preventDefault();
+//
+//   let elm
+// })
+//

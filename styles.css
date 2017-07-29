@@ -55,10 +55,6 @@ h4 {
   font-family: 'Amatic SC';
 }
 
-/*span {
-  font-family: 'Amatic SC';
-}*/
-
 .results {
   display: flex;
   flex-wrap: wrap;
